@@ -11,7 +11,7 @@ $login-border: #8daac5;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../img/heatmap_bg_test.svg);
+  background-image: url(../img/ms_bg.jpg);
   background-size: cover;
 }
 
@@ -109,6 +109,11 @@ select:-webkit-autofill:focus {
   justify-content: center;
   flex-grow: 1;
   max-width: 415px;
+  background-color: #007bff;
+
+  .icon-gf-ms_wordmark {
+    font-size: 2rem;
+  }
 }
 
 .login-tab-header {
@@ -301,7 +306,7 @@ select:-webkit-autofill:focus {
     flex-grow: 1;
 
     .logo-icon {
-      width: 130px;
+      width: 210px;
     }
 
     .icon-gf-grafana_wordmark {
