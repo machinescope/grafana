@@ -6,8 +6,8 @@ describe('grafanaSingleStat', function() {
   describe('legacy thresholds', () => {
     describe('positive thresholds', () => {
       var data: any = {
-        colorMap: ['green', 'yellow', 'red'],
-        thresholds: [20, 50],
+        colorMap: ['green', 'yellow', 'red', 'blue', 'cyan'],
+        thresholds: [20, 30, 50, 90],
       };
 
       it('5 should return green', () => {
@@ -30,20 +30,24 @@ describe('grafanaSingleStat', function() {
         expect(getColorForValue(data, 25)).to.be('yellow');
       });
 
-      it('50 should return red', () => {
+      it('31 should return red', () => {
         expect(getColorForValue(data, 50)).to.be('red');
       });
 
-      it('55 should return red', () => {
-        expect(getColorForValue(data, 55)).to.be('red');
+      it('55 should return blue', () => {
+        expect(getColorForValue(data, 55)).to.be('blue');
       });
+      
+      it('95 should return cyan', () => {
+          expect(getColorForValue(data, 95)).to.be('cyan');
+        });
     });
   });
 
   describe('negative thresholds', () => {
     var data: any = {
-      colorMap: ['green', 'yellow', 'red'],
-      thresholds: [0, 20],
+      colorMap: ['green', 'yellow', 'red', 'blue', 'cyan'],
+      thresholds: [20, 30, 50, 95],
     };
 
     it('-30 should return green', () => {
@@ -61,8 +65,8 @@ describe('grafanaSingleStat', function() {
 
   describe('negative thresholds', () => {
     var data: any = {
-      colorMap: ['green', 'yellow', 'red'],
-      thresholds: [-27, 20],
+      colorMap: ['green', 'yellow', 'red', 'blue', 'cyan'],
+      thresholds: [-27, 20, 30, 50],
     };
 
     it('-30 should return green', () => {

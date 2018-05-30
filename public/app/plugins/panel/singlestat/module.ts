@@ -59,7 +59,7 @@ class SingleStatCtrl extends MetricsPanelCtrl {
     thresholds: '',
     colorBackground: false,
     colorValue: false,
-    colors: ['#299c46', 'rgba(237, 129, 40, 0.89)', '#d44a3a'],
+    colors: ['#299c46', 'rgba(237, 129, 40, 0.89)', '#d44a3a', '#3a3ad4', '#3ad4b2'],
     sparkline: {
       show: false,
       full: false,
@@ -205,10 +205,10 @@ class SingleStatCtrl extends MetricsPanelCtrl {
   setColoring(options) {
     if (options.background) {
       this.panel.colorValue = false;
-      this.panel.colors = ['rgba(71, 212, 59, 0.4)', 'rgba(245, 150, 40, 0.73)', 'rgba(225, 40, 40, 0.59)'];
+      this.panel.colors = ['rgba(71, 212, 59, 0.4)', 'rgba(245, 150, 40, 0.73)', 'rgba(225, 40, 40, 0.59)', 'rgba(225, 40, 40, 0.59)', 'rgba(225, 40, 40, 0.59)'];
     } else {
       this.panel.colorBackground = false;
-      this.panel.colors = ['rgba(50, 172, 45, 0.97)', 'rgba(237, 129, 40, 0.89)', 'rgba(245, 54, 54, 0.9)'];
+      this.panel.colors = ['rgba(50, 172, 45, 0.97)', 'rgba(237, 129, 40, 0.89)', 'rgba(245, 54, 54, 0.9)', 'rgba(225, 40, 40, 0.59)', 'rgba(225, 40, 40, 0.59)'];
     }
     this.render();
   }
