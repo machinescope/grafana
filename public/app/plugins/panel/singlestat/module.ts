@@ -205,18 +205,21 @@ class SingleStatCtrl extends MetricsPanelCtrl {
   setColoring(options) {
     if (options.background) {
       this.panel.colorValue = false;
-      this.panel.colors = ['rgba(71, 212, 59, 0.4)', 'rgba(245, 150, 40, 0.73)', 'rgba(225, 40, 40, 0.59)', 'rgba(225, 40, 40, 0.59)', 'rgba(225, 40, 40, 0.59)'];
+      this.panel.colors = ['rgba(0, 153, 204,0.6)','rgba(71, 212, 59, 0.4)', 'rgba(245, 150, 40, 0.73)', 'rgba(204, 204, 0, 0.5)', 'rgba(225, 40, 40, 0.59)'];
     } else {
       this.panel.colorBackground = false;
-      this.panel.colors = ['rgba(50, 172, 45, 0.97)', 'rgba(237, 129, 40, 0.89)', 'rgba(245, 54, 54, 0.9)', 'rgba(225, 40, 40, 0.59)', 'rgba(225, 40, 40, 0.59)'];
+      this.panel.colors = ['rgba(0, 153, 204,0.6)','rgba(50, 172, 45, 0.97)', 'rgba(237, 129, 40, 0.89)', 'rgba(204, 204, 0, 0.97)', 'rgba(245, 54, 54, 0.9)'];
     }
     this.render();
   }
 
   invertColorOrder() {
     var tmp = this.panel.colors[0];
-    this.panel.colors[0] = this.panel.colors[2];
-    this.panel.colors[2] = tmp;
+    this.panel.colors[0] = this.panel.colors[4];
+    this.panel.colors[4] = tmp;
+    tmp = this.panel.colors[1];
+    this.panael.colors[1] = this.panel.colors[3];
+    this.panel.colors[3] = tmp;
     this.render();
   }
 
