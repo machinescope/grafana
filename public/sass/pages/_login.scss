@@ -103,7 +103,8 @@ select:-webkit-autofill:focus {
   }
   
   .icon-gf-ms_wordmark {
-    color: $link-color;
+    color: orange!important;
+    font-family:"Arial Black", Gadget, sans-serif!important;
     position: relative;
     font-size: 2rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -285,7 +286,7 @@ select:-webkit-autofill:focus {
   .login-branding {
     width: 35%;
     padding: 4rem 2rem;
-    border-right: 1px solid $login-border;
+    border-right:solid $login-border;
     justify-content: flex-start;
   }
 
