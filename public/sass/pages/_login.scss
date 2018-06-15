@@ -86,6 +86,9 @@ select:-webkit-autofill:focus {
   align-items: center;
   justify-content: center;
   flex-grow: 0;
+  border-right-width: 0px;
+  background-color: black
+  
 
   .logo-icon {
     width: 70px;
@@ -93,6 +96,13 @@ select:-webkit-autofill:focus {
   }
 
   .icon-gf-grafana_wordmark {
+    color: $link-color;
+    position: relative;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon-gf-ms_wordmark {
     color: $link-color;
     position: relative;
     font-size: 2rem;
@@ -110,10 +120,6 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
   max-width: 415px;
   background-color: #007bff;
-
-  .icon-gf-ms_wordmark {
-    font-size: 2rem;
-  }
 }
 
 .login-tab-header {
